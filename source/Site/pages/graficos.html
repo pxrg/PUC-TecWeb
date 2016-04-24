@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>O que você quer saber sobre ...</title>
+    <link rel="stylesheet" type="text/css" href="/Site/static/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/Site/static/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/Site/static/font-awesome-4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/Site/static/css/style.css">
+    <script type="text/javascript" src="/Site/static/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="/Site/static/js/Chart.js"></script>
+    <!-- // <script type="text/javascript" src="/Site/static/bootstrap-3.3.6/js/bootstrap.min.js"></script> -->
+</head>
+<body>
+    <nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/Site/pages/inicial.html">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active">
+                <a href="/Site/pages/graficos.html">
+                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                    Graficos
+                </a>
+            </li>
+            <li >
+                <a href="/Site/pages/pesquisa.html">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                    Pesquisa avançada
+                </a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active">
+                <a href="#">
+                    <span class="glyphicon glyphicon-user"></span>
+                    Login
+                </a>
+            </li>
+              <li class="active">
+                <a href="/Site/index.html">
+                    <i class="fa fa-power-off" aria-hidden="true"></i>
+                </a>
+            </li>
+          </ul>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav>
+    <div class="container container-body">
+      <canvas id="line" width="400" height="100"></canvas>
+      <canvas id="radar" width="400" height="200"></canvas>
+      <canvas id="polar" width="400" height="200"></canvas>
+    </div>
+</body>
+<script type="text/javascript" src="/Site/static/js/charts_script.js"></script>
+</html>

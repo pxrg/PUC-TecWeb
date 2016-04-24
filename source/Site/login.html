@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Entrar no sistema</title>
+    <link rel="stylesheet" type="text/css" href="/Site/static/bootstrap-3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/Site/static/bootstrap-3.3.6/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/Site/static/font-awesome-4.6.1/css/font-awesome.min.css">
+    <script type="text/javascript" src="/Site/static/js/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="/Site/static/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .form-signin {
+            max-width: 430px;
+            padding: 15px;
+            margin: 0 auto;
+            margin-top: 10%;
+        }
+        .input-group{
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <form class="form-signin" method="POST" action="pages/inicial.html">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h4>Entrar no sistema</h4>
+                </div>
+                <div class="panel-body">
+                        <div class="input-group input-group-lg  margin-bottom-sm">
+                            <span class="input-group-addon"><i class="fa fa-envelope-o fa-fw"></i></span>
+                            <input class="form-control" placeholder="Email ou Usuário..." required="required" />
+                        </div>
+                         <div class="input-group input-group-lg">
+                            <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+                            <input type="password" class="form-control" placeholder="Senha..." required="required" />
+                        </div>
+                        <input type="submit" class="btn btn-info btn-lg btn-block" />
+                        <button type="submit" class="btn btn-primary btn-lg btn-block" >
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            Entrar com facebook
+                        </button>
+                        <button type="submit" class="btn btn-danger btn-lg btn-block" >
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                            Entrar com google
+                        </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
