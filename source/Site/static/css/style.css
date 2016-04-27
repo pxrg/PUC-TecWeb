@@ -1,3 +1,13 @@
+html, body{
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background: linear-gradient(white, #ddd) no-repeat;
+    background-color:  #ddd;
+    background-size: contain;
+}
 .container-body{
     margin-top: 60px;
 }
