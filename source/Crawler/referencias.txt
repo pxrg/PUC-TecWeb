@@ -1,0 +1,14 @@
+## API twitter ##
+https://dev.twitter.com/overview/documentation#rest-api
+
+## API twitter search ##
+https://dev.twitter.com/rest/public/search
+
+# Exemplo de busca: https://api.twitter.com/1.1/search/tweets.json?q=%40twitterapi
+
+## frameworks ##
+https://github.com/ttezel/twit
+https://www.npmjs.com/package/nodejs-twitter-crawler
+https://www.npmjs.com/package/twitter ##usado
+https://github.com/desmondmorris/node-twitter ##usado
+
