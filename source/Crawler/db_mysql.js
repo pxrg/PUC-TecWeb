@@ -15,17 +15,17 @@ function exit(){
     process.exit(1);
 }
 
-function execute_sql(sql, data, callback, pool){
+function execute_sql(sql, data, callback, pool, use_release){
     if (pool == undefined) { pool = get_pool_connection() };
     pool.getConnection(function(err, conn){
         conn.query(sql, data, function(err, result){
             callback(err, result);
         });
-        conn.release();
+        if (use_release == undefined || !use_release) {conn.release();};
     });
 }
 
-function create_tables(){
+function create_tables(callback){
     fs.readFile('scripts/create_tables.sql', 'utf-8', function(error, data){
         if(error) throw error;
         if (data == undefined) { return; };
@@ -41,6 +41,7 @@ function create_tables(){
                 });
             };
             conn.release();
+            if (callback != undefined) {callback()};
             // exit();
         });
     });

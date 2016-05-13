@@ -8,6 +8,9 @@ create table if not exists partidos(
     nome varchar(255) not null,
     inclusao datetime default now(),
     modificacao datetime,
+    link varchar(255),
+    id_referencia varchar(255),
+    imagem text,
     Primary key(id)
 );
 
@@ -36,7 +39,6 @@ create table if not exists fontes_info(
     nome varchar(255) not null,
     inclusao datetime default now(),
     ultima_varredura datetime,
-    link varchar(255),
     palavras_chave text,
     Primary key(id)
 );
@@ -53,20 +55,21 @@ create table if not exists informacoes(
     conteudo text,
     inclusao datetime default now(),
     palavras_chave text,
+    id_referencia varchar(255),
     referencia text,
     objeto_original text,
     id_classificacao_info integer,
     id_fonte_info integer not null,
-    id_politico integer not null,
+    id_partido integer,
     Primary key(id),
     constraint fk_info_classif Foreign key (id_classificacao_info) references classificacoes_info(id),
     constraint fk_info_font Foreign key (id_fonte_info) references fontes_info(id),
-    constraint fk_info_polit Foreign key (id_politico) references politicos(id)
+    constraint fk_info_polit Foreign key (id_partido) references partidos(id)
 );
 
 create index idx_politico_part on politicos(id_partido);
 create index idx_politico_car on politicos(id_cargo_partido);
 
 create index idx_info_fonte on informacoes(id_fonte_info);
-create index idx_info_polit on informacoes(id_politico);
+create index idx_info_part on informacoes(id_partido);
 create index idx_info_classif on informacoes(id_classificacao_info);
